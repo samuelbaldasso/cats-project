@@ -1,0 +1,172 @@
+:root {
+  font-size: 62.5%;
+  --primary-color: #065e7c;
+  --secondary-color: #f4fcff;
+  --input-bc: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+input[placeholder] {
+  font-family: "Mulish", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+header input {
+  width: 100%;
+  margin: 0 2.4rem;
+  border: none;
+  padding-left: 0.5rem;
+  border-radius: 0.4rem;
+  background-color: var(--input-bc);
+}
+
+::placeholder {
+  color: #fff;
+}
+
+header img {
+  border-radius: 999.9rem;
+  background: var(--secondary-color);
+}
+
+#paw {
+  padding: 0 0.5rem;
+}
+
+.img img {
+  width: 100vw;
+}
+
+.page {
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+
+.main,
+.articles {
+  padding: 1.6rem;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.likes-img img {
+  background-color: var(--primary-color);
+  border-radius: 999.9rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.likes-img {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.paragraph p {
+  font-size: 1.6rem;
+  line-height: 160%;
+}
+
+.paragraph p + p {
+  margin-top: 1.2rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cards, .page{
+  animation: top-down 700ms 350ms forwards;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.articles h3 {
+  font-size: 2.4rem;
+  padding: 2rem 0;
+}
+
+.card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.card-box p {
+  font-size: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1.6rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .page {
+    flex-direction: row;
+    padding: 2.5rem;
+  }
+  main,
+  .img img {
+    width: 60vw;
+    margin-right: 2rem;
+  }
+  .articles {
+    width: 40vw;
+    padding: 0;
+  }
+
+  .articles h3 {
+    padding-top: 0;
+  }
+
+  .likes{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@keyframes top-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
